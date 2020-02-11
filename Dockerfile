@@ -6,8 +6,8 @@ LABEL description="Ethereum 2 Prysm client, beacon and validator node"
 
 FROM debian:10-slim
 
-#RUN apt-get update && apt-get -y install \
-#	libssl1.1 jq curl
+RUN apt-get update && apt-get -y install \
+	libssl1.1 jq curl
 
 COPY --from=beacon /app/beacon-chain/image.binary.runfiles/prysm/beacon-chain/linux_amd64_stripped/image.binary /beacon-chain
 COPY --from=validator /app/validator/image.binary.runfiles/prysm/validator/linux_amd64_stripped/image.binary /validator
