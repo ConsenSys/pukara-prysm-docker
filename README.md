@@ -6,7 +6,9 @@ Upstream repository: https://github.com/prysmaticlabs/prysm
 
 ## Usage
 
- ```docker run --rm -ti -p TODO ```
+Starting a beacon-node with an JSON RPC endpoint on port 4001
+
+ ```docker run --rm -p4000:4000 -p4001:4001 consensys/prysm beacon-chain --grpc-gateway-port 4001```
 
 ## How to update the image
 
@@ -20,4 +22,4 @@ Current version is fixed at **LATEST** at gcr.io/prysmaticlabs/prysm/{beacon-cha
 
 ### Debugging
 
-> docker run --rm consensys/prysm beacon-chain help
+> docker run --rm consensys/prysm --help
