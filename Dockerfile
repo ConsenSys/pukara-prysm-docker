@@ -1,7 +1,8 @@
-FROM gcr.io/prysmaticlabs/prysm/beacon-chain@sha256:1ed9ff5f012fa6419ab507b327ee6d5a9e4c45918adb62e3c06f8ba9c99db8df as beacon
-FROM gcr.io/prysmaticlabs/prysm/validator@sha256:56244949688e11dc7f5bd7b15461440f83bfea2d6f93abc40ccd60fd2cd8ebd0 as validator
+FROM gcr.io/prysmaticlabs/prysm/beacon-chain@sha256:94aad38139ca8f50c80879bdd6e4684102e7e629fe7b3d9b293932bd65a46eac as beacon
+FROM gcr.io/prysmaticlabs/prysm/validator@sha256:808b5dd020c12ffb3472a10fdbe113dbfa89bf1ed740f5a110406e725e4ff900 as validator
 MAINTAINER Sylvain Laurent <sylvain.laurent@consensys.net>
-LABEL version="0.1"
+LABEL version="0.1.2"
+LABEL appversion="0.3.3"
 LABEL description="Ethereum 2 Prysm client, beacon and validator node"
 
 FROM debian:10-slim
